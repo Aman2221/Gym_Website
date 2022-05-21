@@ -1,6 +1,8 @@
 const AddMember = () => {
   return (
-    <div>add Member component</div>
+    <>
+     <h1>Add Member Component</h1>
+    </>
   )
 }
 

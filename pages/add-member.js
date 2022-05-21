@@ -1,8 +1,15 @@
 import AddMember from '../components/AddMember/AddMember'
+import Head from "next/head"
 
 const add_member = () => {
   return (
-    <AddMember />
+    <>
+      <Head>
+        <title>Add  Members</title>
+      </Head>
+      <AddMember />
+    </>
+    
   )
 }
 

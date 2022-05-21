@@ -1,8 +1,14 @@
 import LoginPage from '../components/Login/LoginPage'
+import Head from "next/head"
 
 const login = () => {
   return (
-    <LoginPage />
+    <>
+      <Head>
+        <title>Login Page</title>
+      </Head>
+      <LoginPage />
+    </>
   )
 }
 

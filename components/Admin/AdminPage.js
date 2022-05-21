@@ -1,6 +1,8 @@
 const AdminPage = () => {
   return (
-    <div>admin component</div>
+    <>
+      <h1>Admin Component</h1>
+    </>
   )
 }
 

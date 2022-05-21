@@ -1,8 +1,15 @@
 import AdminPage from '../components/Admin/AdminPage'
+import Head from "next/head"
 
 const admin = () => {
   return (
-    <AdminPage />
+    <>
+      <Head>
+        <title>Admin</title>
+      </Head>
+      <AdminPage />
+    </>
+
   )
 }
 
