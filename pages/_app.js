@@ -1,10 +1,9 @@
 import '../styles/Global/globals.css'
-import store from '../store'
 import { Provider } from 'react-redux'
+import store from '../store'
 
 function MyApp({ Component, pageProps }) {
-  store.subscribe(() => console.log(store.getState()));
-  return <Provider store={ store }><Component {...pageProps} /></Provider>
+  return  <Provider store={store}><Component {...pageProps} /></Provider>
 }
 
 export default MyApp
