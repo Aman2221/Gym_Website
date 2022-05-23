@@ -2,7 +2,7 @@ import HomePage from '../components/Home/HomePage'
 import styles from '../styles/Home/Home.module.css'
 import Head from "next/head"
 import { useDispatch, useSelector } from 'react-redux'
-import { increment , decrement } from '../actions/index'
+import { increment , decrement } from '../Redux/actions/index'
 
 export default function Home() {
 
