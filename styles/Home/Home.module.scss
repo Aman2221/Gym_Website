@@ -1,0 +1,23 @@
+
+@mixin flexBox($justifyContent,$alignItem,$direction ){
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItem,;
+    flex-direction: $direction;
+}
+.counterDiv{
+    width : 250px;
+    @include flexBox(center,center,row);
+    button{
+        border : none;
+        outline: none;
+        background-color: cyan;
+        color : #000000;
+        @include flexBox(center, center, row);
+        height: 25px;
+        width: 25px;
+        font-weight: 500;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
