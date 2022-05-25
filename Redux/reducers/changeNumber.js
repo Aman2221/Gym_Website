@@ -1,14 +1,15 @@
 const initialState = {
-    number : 0, 
+    number : 10,
     user : null,
-    itTrue : false
+    isValid : false
 }
 
-export const changeNumber = (state = initialState.number, action) => {
+const changeNumber = (state = initialState.number, action) => {
     switch(action.type){
-        case 'increment' : return state + action.payload;
-        case 'decrement' : return state - action.payload;
-        case 'getUser' :  return {...state + user};
-        default : return state;
+        case 'increment' : return state + action.payload; 
+        case 'decrement' : return state - action.payload; 
+        default : return state
     }
 }
+
+export default changeNumber
