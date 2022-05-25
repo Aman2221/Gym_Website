@@ -1,7 +1,7 @@
 const initialState = {
     number : 10,
     user : null,
-    isValid : false
+    isValid : false,
 }
 
 const changeNumber = (state = initialState.number, action) => {
