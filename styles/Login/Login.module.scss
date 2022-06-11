@@ -1,0 +1,96 @@
+
+$bg-color : #FCF8E8;
+$main-color : #F9F9F9;
+
+@mixin flexBox($direction,$alignItem,$justifyContent){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+}
+
+@mixin grid($column, $columnWidth, $row, $rowWidth, $columnGap, $rowGap) {
+    display: grid;
+    grid-template-columns: repeat($column, $columnWidth);
+    grid-template-rows: repeat($row, $rowWidth);
+    column-gap: $columnGap;
+    row-gap: $rowGap;
+}
+
+.loginPage{
+    background-color: $bg-color;
+    height: 100vh;
+    width: 100%;
+    @include flexBox(row,center,center);
+    font-family: 'Poppins',serif;
+}
+
+.loginPageDiv {
+    width: 60%;
+    background-color: $main-color;
+    height: 80vh;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+    background-color: $main-color;
+    @include grid(2, 50%, 1, 100%, 0px, 0px)
+}
+
+.loginPageDivRight{
+    height: 100%;
+    width: 100%;
+    @include flexBox(row, center, center);
+    background-color: $bg-color;
+}
+.loginPageDivLeft{
+    @include flexBox(row, center, center);
+    width: 100%;
+}
+.leftForm{
+    width: 100%;
+    @include flexBox(column, center, center);
+    font-family: 'Poppins',serif !important;
+}
+.loginButtons{
+    width: 300px;
+    margin-top: 25px;
+    @include flexBox(row, center, space-around);
+    color: #fff !important;
+}
+
+.inputFields {
+    width: 300px;
+    margin-top: 25px;
+    @include flexBox(row, center, space-around);
+}
+
+.icons{
+    margin-top: 10px;
+    color : grey !important;
+    border: 1px solid grey;
+    height: 40px;
+    padding: 8px;
+    width: 40px;
+    @include flexBox(row, center, center);
+}
+
+.boxStyles{
+    width: 300px;
+    margin-top: 20px;
+    @include flexBox(column, center, space-between);
+}
+.rememberMe{
+    width: 300px;
+    margin-top: 20px;
+    @include flexBox(row, center, space-between);
+}
+@media screen and (max-width: 1200px){
+    .loginPageDiv {
+        width: 90%;
+        background-color: $main-color;
+        height: 80vh;
+        @include grid(1, 100%, 1, 100%, 0px, 0px)
+    }
+
+    .loginPageDivRight {
+        display: none;
+    }
+}
